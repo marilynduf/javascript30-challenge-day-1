@@ -1,7 +1,7 @@
 ![](js30-challenge.gif)
 
 # Challenge Day 1
-[Build a drum kit](https://courses.wesbos.com/account/access/59e63178789cae180d436a72/view/194130650)
+[Build a drum kit](https://courses.wesbos.com/account/access/59e63178789cae180d436a72/view/194130650). All daily challenge's files are given, except for the javascript one. The task is watch the video and then reproduce the component by filling the script tags. 
 ## Concepts of the day
 * key events
 * playing audio
