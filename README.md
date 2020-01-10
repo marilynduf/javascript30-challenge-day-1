@@ -5,7 +5,7 @@
 ## Concepts of the day
 * key events
 * playing audio
-* listening for the transition end event
+* listening for [transitionend](https://developer.mozilla.org/fr/docs/Web/Events/transitionend) event
 * animation
----
-My goal is to become better at Javacript Write plain Javascript everyday for 30 days with [javascript30.com](https://javascript30.com/) - This course has been created by [Wes Bos](https://github.com/wesbos)
+-------
+My goal is to become better at Javacript so I write plain Javascript everyday for 30 days with [javascript30.com](https://javascript30.com/)! - This course has been created by [Wes Bos](https://github.com/wesbos) 
