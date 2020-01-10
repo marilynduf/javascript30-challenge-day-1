@@ -1,3 +1,5 @@
+![](js30-challenge.gif)
+
 # javascript30-challenge-day-1
 Day 1: Build a drum kit
 
