@@ -11,7 +11,6 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 var replace = require('gulp-replace');
 
-
 // File paths
 const files = {
     scssPath: 'src/scss/**/*.scss',
