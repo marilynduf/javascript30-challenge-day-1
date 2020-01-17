@@ -1,71 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>JS Drum Kit</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>JS Drum Kit</title>
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kumar+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gelasio|Roboto:100&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-
-  <div class="keys">
-    <div data-key="65" class="key">
-      <kbd>A</kbd>
-      <span class="sound">clap</span>
-    </div>
-    <div data-key="83" class="key">
-      <kbd>S</kbd>
-      <span class="sound">hihat</span>
-    </div>
-    <div data-key="68" class="key">
-      <kbd>D</kbd>
-      <span class="sound">kick</span>
-    </div>
-    <div data-key="70" class="key">
-      <kbd>F</kbd>
-      <span class="sound">openhat</span>
-    </div>
-    <div data-key="71" class="key">
-      <kbd>G</kbd>
-      <span class="sound">boom</span>
-    </div>
-    <div data-key="72" class="key">
-      <kbd>H</kbd>
-      <span class="sound">ride</span>
-    </div>
-    <div data-key="74" class="key">
-      <kbd>J</kbd>
-      <span class="sound">snare</span>
-    </div>
-    <div data-key="75" class="key">
-      <kbd>K</kbd>
-      <span class="sound">tom</span>
-    </div>
-    <div data-key="76" class="key">
-      <kbd>L</kbd>
-      <span class="sound">tink</span>
-    </div>
-  </div>
-
-  <audio data-key="65" src="sounds/clap.wav"></audio>
-  <audio data-key="83" src="sounds/hihat.wav"></audio>
-  <audio data-key="68" src="sounds/kick.wav"></audio>
-  <audio data-key="70" src="sounds/openhat.wav"></audio>
-  <audio data-key="71" src="sounds/boom.wav"></audio>
-  <audio data-key="72" src="sounds/ride.wav"></audio>
-  <audio data-key="74" src="sounds/snare.wav"></audio>
-  <audio data-key="75" src="sounds/tom.wav"></audio>
-  <audio data-key="76" src="sounds/tink.wav"></audio>
-
-<script>
-
-  // TODO: Faire jouer le son lorsque l'on clique sur les touches spécifiées
-  // TODO: Repartir l'audio à zéro à chaque fois que l'on clique sur une touche: On n'attends pas que l'audio soit joué au complet pour le rejouer.
-  // TODO: Animer les touches cliquées (transition)
-  // TODO: «revert» l'animation des touches cliquées (transitionend)
-
-</script>
+<header>
+    <h1><a class="link" href="https://javascript30.com/">Défi 30 jours Vanilla Javascript</a> / <a class="link" href="https://courses.wesbos.com/account/access/59e63178789cae180d436a72/view/194837696">Jour 1</a></h1>
+    <p class="concept">Concepts du jour: key events, playing audio, listening for transitionend event, animation, keyframes</p>
+</header>
 
 
+<main class="container">
+    <p class="instructions">Tapez les touches de votre clavier</p>
+    <div class="keypressed-wrap">
+        <div id="keypressed"></div>
+    </div>
+    <div class="keys">
+        <div data-key="65" class="key">
+            <kbd>A</kbd>
+            <span class="sound">clap</span>
+        </div>
+        <div data-key="83" class="key">
+            <kbd>S</kbd>
+            <span class="sound">hihat</span>
+        </div>
+        <div data-key="68" class="key">
+            <kbd>D</kbd>
+            <span class="sound">kick</span>
+        </div>
+        <div data-key="70" class="key">
+            <kbd>F</kbd>
+            <span class="sound">openhat</span>
+        </div>
+        <div data-key="71" class="key">
+            <kbd>G</kbd>
+            <span class="sound">boom</span>
+        </div>
+        <div data-key="72" class="key">
+            <kbd>H</kbd>
+            <span class="sound">ride</span>
+        </div>
+        <div data-key="74" class="key">
+            <kbd>J</kbd>
+            <span class="sound">snare</span>
+        </div>
+        <div data-key="75" class="key">
+            <kbd>K</kbd>
+            <span class="sound">tom</span>
+        </div>
+        <div data-key="76" class="key">
+            <kbd>L</kbd>
+            <span class="sound">tink</span>
+        </div>
+    </div>
+    <audio data-key="65" src="src/sounds/clap.wav"></audio>
+    <audio data-key="83" src="src/sounds/hihat.wav"></audio>
+    <audio data-key="68" src="src/sounds/kick.wav"></audio>
+    <audio data-key="70" src="src/sounds/openhat.wav"></audio>
+    <audio data-key="71" src="src/sounds/boom.wav"></audio>
+    <audio data-key="72" src="src/sounds/ride.wav"></audio>
+    <audio data-key="74" src="src/sounds/snare.wav"></audio>
+    <audio data-key="75" src="src/sounds/tom.wav"></audio>
+    <audio data-key="76" src="src/sounds/tink.wav"></audio>
+</main>
+
+<footer>
+    <p class="credit">&copy; Photo par <a class="link" href="https://unsplash.com/@avirichards?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge">Avi
+        Richards</a> on <a class="link" href="https://unsplash.com/">Unsplash</a></p>
+</footer>
+<script src="dist/all.js"></script>
 </body>
 </html>
