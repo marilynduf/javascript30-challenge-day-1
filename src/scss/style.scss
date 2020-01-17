@@ -1,5 +1,6 @@
 //variables
 $color-text: #55ddc8;
+$color-main: #55ddc8;
 $color-text-credit: #1a2c39;
 $color-text-sound: #1a2c39;
 $color-text-key: #1a2c39;
@@ -9,6 +10,9 @@ $color-border: #1a2c39;
 $color-border-hover: #55ddc8;
 
 $font-main: 'Roboto', sans-serif;
+$font-second: 'Gelasio', sans-serif;
+
+$animation-time: 10s;
 
 html {
   font-family: $font-main;
@@ -31,10 +35,21 @@ html {
       color: $color-text;
       padding: 2rem;
     }
+    footer{
+      text-align: right;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      color: #1a2c39;
+      .link{
+        color: #1a2c39;
+        border-color: #1a2c39;
+      }
+    }
     .link{
       color: $color-text;
       text-decoration: none;
-      border-bottom: 1px solid $color-text;
+      border-bottom: 1px dotted $color-text;
       margin-bottom: 1rem;
       &:hover{
         color: $color-text-hover;
@@ -45,33 +60,56 @@ html {
         border-color: $color-text-active;
       }
     }
-    .credit {
-      font-size: 1.2rem;
-      letter-spacing: 1px;
-      color: $color-text-credit;
-      font-weight: 400;
-      position: fixed;
-      bottom: 0;
-      right: 0;
-      padding: 2rem;
-    }
     .concept{
       padding-top: 2rem;
       width: 50%;
       line-height: 1.4rem;
     }
     .instructions{
-      font-family: $font-main;
+      line-height: 4rem;
+      font-family: $font-second;
       padding: 2rem;
       font-size: 4rem;
-      color: $color-text;
       text-align: center;
-      animation: color-change 10s infinite;
+      animation: color-change $animation-time infinite;
     }
     @keyframes color-change {
-      0% { color: #ff433d; }
-      100% { color: #fffa6a; }
-
+      0% { color: $color-main; border-color: $color-main;}
+      33% { color: #fffa6a; border-color: #fffa6a;}
+      66% { color: #ff5a60; border-color: #ff5a60;}
+      100% { color: $color-main; border-color: $color-main;}
+    }
+    @keyframes color-change-background {
+      0% { border-color: $color-text; background-color: $color-text; }
+      33% { border-color: #fffa6a; background-color: #fffa6a;}
+      66% { border-color: #ff5a60; background-color: #ff5a60;}
+      100% { border-color: $color-text; background-color: $color-text;}
+    }
+    .keypressed-wrap{
+      display: flex;
+      padding-left: 2rem;
+      padding-bottom: 2rem;
+      justify-content: center;
+    }
+    #keypressed{
+      min-width: 5rem;
+      height: 5rem;
+      padding: 1rem;
+      border: 1px solid $color-text;
+      border-radius: 6px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      font-family: $font-main;
+      animation: color-change $animation-time infinite;
+      opacity: 0;
+      transition: all 0.4s;
+      transition-timing-function: ease-out;
+    }
+    .keypressed-animation{
+      opacity: 1!important;
     }
 
     .keys {
@@ -87,21 +125,14 @@ html {
       border-radius: 2px;
       margin: 1rem;
       padding: 1rem;
-      -webkit-transition: all .07s;
-      transition: all .07s;
+      transition: all 0.07s;
       text-align: center;
       color: $color-text-key;
       min-width: 130px;
-      &:hover{
-        transition: 0.07s;
-        transform: scale(1.1);
-        border-color: $color-border-hover;
-        background: $color-text;
-        }
     }
     kbd {
         display: block;
-        font-size: 5vw;
+        font-size: 8vw;
         font-family: 'Kumar One', cursive;
       }
 
@@ -119,7 +150,6 @@ html {
 .key-animation{
   transform: scale(1.1);
   color:#1a2c39!important;
-  border-color: $color-text!important;
-  background: $color-text;
 }
+
 

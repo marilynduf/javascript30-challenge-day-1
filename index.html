@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="dist/style.css">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kumar+One&display=swap" rel="stylesheet">
-<!--    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap" rel="stylesheet">-->
     <link href="https://fonts.googleapis.com/css?family=Gelasio|Roboto:100&display=swap" rel="stylesheet">
 </head>
 
@@ -15,12 +14,15 @@
 
 <header>
     <h1><a class="link" href="https://javascript30.com/">Défi 30 jours Vanilla Javascript</a> / <a class="link" href="https://courses.wesbos.com/account/access/59e63178789cae180d436a72/view/194837696">Jour 1</a></h1>
-    <p class="concept">Concepts of the day: key events, playing audio, listening for transitionend event, animation</p>
+    <p class="concept">Concepts du jour: key events, playing audio, listening for transitionend event, animation, keyframes</p>
 </header>
 
 
 <main class="container">
     <p class="instructions">Tapez les touches de votre clavier</p>
+    <div class="keypressed-wrap">
+        <div id="keypressed"></div>
+    </div>
     <div class="keys">
         <div data-key="65" class="key">
             <kbd>A</kbd>
@@ -80,7 +82,21 @@
     window.addEventListener('keydown', function(e) {
 
         const audio = document.querySelector(`audio[data-key='${e.keyCode}']`);
-        const touche = document.querySelector(`.key[data-key='${e.keyCode}']`);
+        const keysound = document.querySelector(`.key[data-key='${e.keyCode}']`);
+
+        function displayKeypressed() {
+            const keypressed = document.getElementById('keypressed');
+            keypressed.classList.add('keypressed-animation');
+            if (e.code === 'Space') return keypressed.innerHTML = `${e.code}`;
+            keypressed.innerHTML = `${e.key}`;
+
+            function removeKeyTransition(e){
+                this.classList.remove('keypressed-animation');
+            }
+            keypressed.addEventListener('transitionend', removeKeyTransition);
+        }
+        displayKeypressed();
+
 
         if(!audio) return;
 
@@ -92,16 +108,33 @@
 
 
         // TODO: Animer les touches pressées (transition)
-        touche.classList.add('key-animation'); // add animation class
-
+        keysound.classList.add('key-animation'); // add animation class
+        function keepColor(randomColor) {
+            let keepedColor = randomColor;
+        }
+        console.log(keepColor());
+        var colors = ['#55ddc8', '#fffa6a', '#ff5a60'];
+        const test = document.querySelector('.key-animation');
+        console.log(test.style.backgroundColor);
+        let i = 0;
+        for (i; i < colors.length; i++) {
+            // Pick a random color from the array 'colors'.
+            let randomColor = colors[Math.floor(Math.random() * colors.length)];
+            while (test.style.backgroundColor === randomColor) randomColor = colors[Math.floor(Math.random() * colors.length)];
+            test.style.backgroundColor = randomColor;
+            test.style.borderColor = randomColor;
+        }
 
         // TODO: retirer l'animation des touches pressées (transitionend), un peu comme un effet «toggle»
         function removeTransition(e) {
             if (e.propertyName !== 'transform') return;
             this.classList.remove('key-animation'); // remove animation
+            test.style.backgroundColor = 'transparent';
+            test.style.borderColor = '#1a2c39';
         }
         const keys = document.querySelectorAll('.key');
         keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
     });
 
 </script>
