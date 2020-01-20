@@ -29,28 +29,27 @@ window.addEventListener('keydown', function(e) {
 
     // TODO: Animer les touches pressées (transition)
     keysound.classList.add('key-animation'); // add animation class
-    function keepColor(randomColor) {
-        let keepedColor = randomColor;
-    }
-    console.log(keepColor());
-    var colors = ['#55ddc8', '#fffa6a', '#ff5a60'];
-    let test = document.querySelector('.key-animation');
-    console.log(test.style.backgroundColor);
-    let i = 0;
-    for (i; i < colors.length; i++) {
-        // Pick a random color from the array 'colors'.
-        let randomColor = colors[Math.floor(Math.random() * colors.length)];
-        while (test.style.backgroundColor === randomColor) randomColor = colors[Math.floor(Math.random() * colors.length)];
-        test.style.backgroundColor = randomColor;
-        test.style.borderColor = randomColor;
-    }
+    // function keepColor(randomColor) {
+    //     let keepedColor = randomColor;
+    // }
+    // var colors = ['#55ddc8', '#fffa6a', '#ff5a60'];
+    // let test = document.querySelector('.key-animation');
+    // console.log(test.style.backgroundColor);
+    // let i = 0;
+    // for (i; i < colors.length; i++) {
+    //     // Pick a random color from the array 'colors'.
+    //     let randomColor = colors[Math.floor(Math.random() * colors.length)];
+    //     while (test.style.backgroundColor === randomColor) randomColor = colors[Math.floor(Math.random() * colors.length)];
+    //     test.style.backgroundColor = randomColor;
+    //     test.style.borderColor = randomColor;
+    // }
 
     // TODO: retirer l'animation des touches pressées (transitionend), un peu comme un effet «toggle»
     function removeTransition(e) {
         if (e.propertyName !== 'transform') return;
         this.classList.remove('key-animation'); // remove animation
-        test.style.backgroundColor = 'transparent';
-        test.style.borderColor = '#1a2c39';
+        // test.style.backgroundColor = 'transparent';
+        // test.style.borderColor = '#1a2c39';
     }
     let keys = document.querySelectorAll('.key');
     keys.forEach(key => key.addEventListener('transitionend', removeTransition));

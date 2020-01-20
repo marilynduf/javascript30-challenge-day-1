@@ -1,0 +1,79 @@
+.day__2{
+  background: url(../src/img/freshh-connection-DWt0SixqK-A-unsplash.jpg);
+  background-size: cover;
+}
+@keyframes color-change {
+  0% { color: $color-main-light; border-color: $color-main-light;}
+  33% { color: #fffa6a; border-color: #fffa6a;}
+  66% { color: $color-text-active; border-color: $color-text-active;}
+  100% { color: $color-main-light; border-color: $color-main-light;}
+}
+@keyframes color-change-background {
+  0% { border-color: $color-main-light; background-color: $color-main-light; }
+  33% { border-color: #fffa6a; background-color: #fffa6a;}
+  66% { border-color: $color-text-active; background-color: $color-text-active;}
+  100% { border-color: $color-main-light; background-color: $color-main-light;}
+}
+.keypressed-wrap{
+  display: flex;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  justify-content: center;
+}
+#keypressed{
+  min-width: 5rem;
+  height: 5rem;
+  padding: 1rem;
+  border: 1px solid $color-main-light;
+  border-radius: 6px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-family: $font-main;
+  animation: color-change $animation-time infinite;
+  opacity: 0;
+  transition: all 0.4s;
+  transition-timing-function: ease-out;
+}
+.keypressed-animation{
+  opacity: 1!important;
+}
+.keys {
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-width: 10rem;
+  max-width: 60rem;
+  .key {
+    border-radius: 2px;
+    margin: 1rem;
+    padding: 1rem;
+    transition: all 0.1s;
+    text-align: center;
+    color: $color-main-dark;
+    background-color: $color-main-light;
+    min-width: 130px;
+    kbd {
+      display: block;
+      font-size: 3rem;
+      font-family: 'Kumar One', cursive;
+    }
+    .sound {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: $color-main-dark;
+      font-family: $font-main;
+    }
+  }
+}
+// animation class
+.key-animation{
+  transform: scale(1.1);
+  background-color: $color-main-light;
+  border-color: $color-main-light!important;
+}
+
+

@@ -12,7 +12,7 @@ var replace = require('gulp-replace');
 
 // File paths
 const files = {
-    scssPath: 'src/scss/**/*.scss',
+    scssPath: 'src/scss/style.scss',
     jsPath: 'src/js/**/*.js'
 };
 // Sass task: compiles the style.scss file into style.css
