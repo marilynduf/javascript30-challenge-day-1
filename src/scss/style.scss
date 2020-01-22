@@ -1,14 +1,5 @@
-@import 'variable';
-@import 'reset';
-@import 'day';
-@import 'day-1';
-
-html {
-  font-family: $font-main;
-  background-size: cover;
-  font-size: 100%;
-  body{
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
+@import 'variable.scss';
+@import 'reset.scss';
+@import 'day-template.scss';
+@import 'days/day-1.scss';
+@import 'days/day-2.scss';
