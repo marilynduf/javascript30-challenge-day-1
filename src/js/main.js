@@ -31,8 +31,6 @@ window.addEventListener('keydown', function(e) {
     function removeTransition(e) {
         if (e.propertyName !== 'transform') return;
         this.classList.remove('key-animation'); // remove animation
-        // test.style.backgroundColor = 'transparent';
-        // test.style.borderColor = '#1a2c39';
     }
     let keys = document.querySelectorAll('.key');
     keys.forEach(key => key.addEventListener('transitionend', removeTransition));
@@ -43,17 +41,19 @@ window.addEventListener('keydown', function(e) {
 function setDate() {
     const timeNow = new Date();
 
-    const heures = timeNow.getHours();
-    const minutes = timeNow.getMinutes();
-    const secondes = timeNow.getSeconds();
+    const sec = timeNow.getSeconds();
+    const secondes = ("0" + sec).slice(-2);
+    const min = timeNow.getMinutes();
+    const minutes = ("0" + min).slice(-2);
+    const h = timeNow.getHours();
+    const heures = ("0" + h).slice(-2);
 
     let horloge = document.getElementById('horloge');
-    horloge.innerHTML = `${heures}:${minutes}:${secondes}`;
+    horloge.innerHTML = `${heures} h ${minutes} min ${secondes}`;
 
-
-    let degreSecondes = ((secondes / 60) * 360);
-    let degreMinutes = ((minutes / 60) * 360);
-    let degreHeures = ((heures / 60) * 360);
+    let degreSecondes = ((secondes / 60) * 360) + 90;
+    let degreMinutes = ((minutes / 60) * 360) + 90;
+    let degreHeures = ((heures / 60) * 360) + 90;
 
     //degré Secondes
     let aiguilleSecondes = document.querySelector('.sec');
@@ -62,7 +62,7 @@ function setDate() {
     let aiguilleMinutes = document.querySelector('.min');
     aiguilleMinutes.style.transform = `rotate(${degreMinutes}deg)`;
     //degré heure
-    let aiguilleHeures = document.querySelector('.min');
+    let aiguilleHeures = document.querySelector('.heure');
     aiguilleHeures.style.transform = `rotate(${degreHeures}deg)`;
 }
 setInterval(setDate, 1000);
