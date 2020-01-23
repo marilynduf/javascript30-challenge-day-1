@@ -1,0 +1,18 @@
+.day__3 {
+  background-image: url(nathan-dumlao-nZ_8AmgBGjM-unsplash.jpg);
+  color: $color-day-3;
+
+  .day__call-to-action {
+    color: $color-day-3;
+    animation: none;
+  }
+  .day__link {
+    color: $color-day-3;
+    border-bottom: 1px solid $color-day-3;
+
+    &:hover {
+      color: complement($color-day-3);
+      border-bottom: 1px solid complement($color-day-3);
+    }
+  }
+}
