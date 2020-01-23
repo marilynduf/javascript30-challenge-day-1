@@ -1,5 +1,5 @@
 .day__2 {
-  background-image: url(../src/img/freshh-connection-DWt0SixqK-A-unsplash.jpg);
+  background-image: url(freshh-connection-DWt0SixqK-A-unsplash.jpg);
   color: $color-day-2;
   .day__call-to-action{
     color: $color-day-2;
@@ -14,12 +14,7 @@
       border-bottom: 1px solid complement($color-day-2);
     }
   }
-  //@keyframes color-change-day-2 {
-  //  0% { color: $color-day-2; border-color: $color-day-2; }
-  //  33% { color: #304d3d; border-color: #304d3d; }
-  //  66% { color: #cc334c; border-color: #cc334c; }
-  //  100% { color: $color-day-2; border-color: $color-day-2; }
-  //}
+
   .horloge-wrap{
     position: relative;
   }

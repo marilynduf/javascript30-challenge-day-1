@@ -1,5 +1,6 @@
-@import 'variable.scss';
+@import 'variable';
 @import 'reset.scss';
-@import 'day-template.scss';
-@import 'days/day-1.scss';
-@import 'days/day-2.scss';
+@import 'day-template';
+@import '../day-1/day-1';
+@import '../day-2/day-2';
+//@import 'days/day-3';
