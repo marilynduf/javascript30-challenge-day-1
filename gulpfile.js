@@ -12,7 +12,7 @@ var replace = require('gulp-replace');
 
 // File paths
 const files = {
-    scssPath: 'src/**/*.scss',
+    scssPath: 'src/scss/**/*.scss',
     jsPath: 'src/**/*.js'
 };
 
@@ -23,6 +23,7 @@ function scssTask(){
         .pipe(sass().on('error', sass.logError)) // compile SCSS to CSS
         .pipe(postcss([ autoprefixer(), cssnano() ])) // PostCSS plugins
         .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
+        // .pipe(replace(/(url()(..\/images\/\w+(.svg|.gif|.png|.jpg)))/gi, '$1../$2'))
         .pipe(dest('dist')
         ); // put final CSS in dist folder
 }
