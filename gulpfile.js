@@ -9,11 +9,13 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 var replace = require('gulp-replace');
+var browserSync = require('browser-sync').create();
 
 // File paths
 const files = {
     scssPath: 'src/scss/**/*.scss',
-    jsPath: 'src/**/*.js'
+    jsPath: 'src/**/*.js',
+    htmlPath: 'src/**/*.html'
 };
 
 // Sass task: compiles the style.scss file into style.css
@@ -47,15 +49,21 @@ function cacheBustTask(){
         .pipe(dest('.'));
 }
 
+
 // Watch task: watch SCSS and JS files for changes
 // If any change, run scss and js tasks simultaneously
 function watchTask(){
-    watch([files.scssPath, files.jsPath],
+    browserSync.init({
+        server:{
+            baseDir: './'
+        }
+    });
+    watch([files.scssPath, files.jsPath, files.htmlPath],
         series(
             parallel(scssTask, jsTask),
             cacheBustTask
         )
-    );
+    ).on('change', browserSync.reload)
 }
 
 // Export the default Gulp task so it can be run
