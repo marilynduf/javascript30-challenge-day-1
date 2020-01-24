@@ -15,7 +15,7 @@ html {
       &__link{
         border-bottom: 1px solid black; //main color
         text-decoration: none;
-        margin-bottom: 2rem;
+        margin-bottom: $padding-global;
         &:active{
           color: $color-text-active;
           border-bottom: 1px solid $color-text-active;
@@ -25,14 +25,14 @@ html {
         font-size: 2rem;
       }
       &__info{
-        padding-top: 2rem;
+        padding-top: $padding-global;
         width: 50%;
         line-height: 1.4rem;
       }
       &__call-to-action{
         line-height: 4rem;
         font-family: $font-second;
-        padding: 2rem;
+        padding: $padding-global;
         font-size: 4rem;
         text-align: center;
         animation: color-change $animation-time infinite;
@@ -45,7 +45,7 @@ html {
       &__header, &__footer{
         font-size: 1rem;
         letter-spacing: 1px;
-        padding: 2rem;
+        padding: $padding-global;
       }
       &__footer{
         text-align: right;

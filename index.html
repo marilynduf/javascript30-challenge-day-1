@@ -3,6 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>JS Drum Kit</title>
         <link rel="stylesheet" href="dist/style.css">
         <link href="https://fonts.googleapis.com/css?family=Kumar+One&display=swap" rel="stylesheet">
@@ -73,14 +74,12 @@
                     Richards</a> sur <a class="day__link" href="https://unsplash.com/">Unsplash</a></p>
             </footer>
         </div>
-
         <div class="day day__2">
             <header class="day__header">
                 <h1><a class="day__title day__link" href="https://courses.wesbos.com/account/access/59e63178789cae180d436a72/view/194837696">Jour 2</a></h1>
                 <p class="day__info">Concepts du jour: javascript setInterval, Date(), animation, css, transition-timing-function</p>
             </header>
             <main class="day__content">
-<!--                <div class="day__call-to-action">«Just watch me»</div>-->
                 <h2 id="horloge" class="day__call-to-action"></h2>
                 <div class="horloge-wrap">
                     <div class="horloge">
@@ -104,19 +103,40 @@
                 <p class="day__footer">&copy; Photo par <a class="day__link" href="https://unsplash.com/@freshhconnection?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Freshh Connection</a> sur <a class="day__link" href="https://unsplash.com/">Unsplash</a></p>
             </footer>
         </div>
-
         <div class="day day__3">
+<!--            <img width="100px" height="auto" src="src/day-3/nathan-dumlao-unsplash-optimized.jpg" alt="image de fond décorative">-->
+            <div class="img"></div>
             <header class="day__header">
                 <h1><a class="day__title day__link" href="https://courses.wesbos.com/account/access/59e63178789cae180d436a72/view/194130480">Jour 3</a></h1>
                 <p class="day__info">Concepts du jour: key events, playing audio, listening for transitionend event, animation, keyframes</p>
             </header>
             <main class="day__content">
-                <h2 class="day__call-to-action">Spacing / Blur / Color</h2>
+                <h2 class="day__call-to-action">
+                    <div class="controls">
+
+                        <div class="wrap-input">
+                            <label for="spacing">Espace:</label>
+                            <input type="range" name="spacing" min="0" max="25" value="10" data-sizing="px">
+                        </div>
+                        <div class="wrap-input">
+                            <label for="blur">Flou:</label>
+                            <input type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+                        </div>
+                        <div class="wrap-input">
+                            <label for="base">Couleur:</label>
+                            <input type="color" name="base" data-sizing="px">
+                        </div>
+
+                    </div>
+
+                </h2>
+
             </main>
             <footer>
                 <p class="day__footer">&copy; Photo par <a class="day__link" href="">Avi
                     Richards</a> sur <a class="day__link" href="https://unsplash.com/">Unsplash</a></p>
             </footer>
+
         </div>
 
         <script src="dist/all.js"></script>

@@ -15,7 +15,8 @@ var browserSync = require('browser-sync').create();
 const files = {
     scssPath: 'src/scss/**/*.scss',
     jsPath: 'src/**/*.js',
-    htmlPath: 'src/**/*.html'
+    htmlPath: 'src/**/*.html',
+    destination: 'dist'
 };
 
 // Sass task: compiles the style.scss file into style.css
@@ -26,7 +27,7 @@ function scssTask(){
         .pipe(postcss([ autoprefixer(), cssnano() ])) // PostCSS plugins
         .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
         // .pipe(replace(/(url()(..\/images\/\w+(.svg|.gif|.png|.jpg)))/gi, '$1../$2'))
-        .pipe(dest('dist')
+        .pipe(dest(files.destination)
         ); // put final CSS in dist folder
 }
 // JS task: concatenates and uglifies JS files to script.js

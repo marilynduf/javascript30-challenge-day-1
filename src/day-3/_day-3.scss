@@ -1,10 +1,11 @@
 .day__3 {
-  background-image: url(../src/day-3/nathan-dumlao-unsplash-optimized.jpg);
+  //background-image: url(../src/day-3/nathan-dumlao-unsplash-optimized.jpg);
   color: $color-day-3;
-
+  position: relative;
   .day__call-to-action {
     color: $color-day-3;
     animation: none;
+    text-align: left;
   }
   .day__link {
     color: $color-day-3;
@@ -15,4 +16,24 @@
       border-bottom: 1px solid complement($color-day-3);
     }
   }
+
+  input[type="color" i]{
+    height: 5rem;
+    width: 5rem;
+  }
+}
+
+:root{
+  --base: yellow;
+  --spacing: 4rem;
+  --blur: 2rem;
+}
+.img{
+  //position: absolute;
+  width: 10rem;
+  height: 10rem;
+  //z-index: -1;
+  padding: var(--spacing);
+  background-color: var(--base);
+  filter: blur(var(--blur));
 }
