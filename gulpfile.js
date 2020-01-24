@@ -9,6 +9,7 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 var replace = require('gulp-replace');
+var babel = require("gulp-babel");
 var browserSync = require('browser-sync').create();
 
 // File paths
@@ -36,11 +37,11 @@ function jsTask(){
         files.jsPath
         //,'!' + 'includes/js/jquery.min.js', // to exclude any specific files
     ])
+        .pipe(babel())
         .pipe(concat('all.js'))
         .pipe(dest('dist')
         );
 }
-
 
 // Cachebust
 var cbString = new Date().getTime();
