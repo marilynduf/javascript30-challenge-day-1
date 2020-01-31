@@ -51,19 +51,21 @@
   flex-wrap: wrap;
   min-width: 10rem;
   max-width: 60rem;
+  padding: 0 1.5rem;
   .key {
     border-radius: 2px;
-    margin: 1rem;
+    margin: 0.5rem;
     padding: 1rem;
     transition: all 0.1s;
     text-align: center;
     color: $color-main-dark;
     background-color: $color-day-1;
-    min-width: 130px;
+    min-width: 110px;
     font-size: 3rem;
     kbd {
       display: block;
       font-family: 'Kumar One', cursive;
+      max-height: 50px;
     }
     .sound {
       font-size: 1rem;

@@ -1,39 +1,99 @@
+:root{
+  --base: #ebf0e7;
+  --spacing: 0px;
+  --blur: 0px;
+}
 .day__3 {
-  //background-image: url(../src/day-3/nathan-dumlao-unsplash-optimized.jpg);
-  color: $color-day-3;
+  color: $color-day-2;
   position: relative;
   .day__call-to-action {
-    color: $color-day-3;
+    color: $color-day-2;
     animation: none;
     text-align: left;
   }
   .day__link {
-    color: $color-day-3;
-    border-bottom: 1px solid $color-day-3;
+    color: $color-day-2;
+    border-bottom: 1px solid $color-day-2;
 
     &:hover {
-      color: complement($color-day-3);
+      color: $color-day-3;
       border-bottom: 1px solid complement($color-day-3);
     }
+    label{
+      color: $color-day-3;
+    }
+  }
+  input[type=color]{
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    border-radius: 100%;
+    background: none;
+  }
+  input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+  input[type="color"]::-webkit-color-swatch {
+    border: solid 2px $color-day-2; /*change color of the swatch border here*/
+    border-radius: 40px;
+  }
+  input[type="range" i].custom-slider {
+    -webkit-appearance: none;     /*nécessaire pour Chrome */
+    padding: 0;                   /* nécessaire pour IE */
+    font: inherit;                /* même rendu suivant font document */
+    outline: none;
+    color: $color-day-2;                  /* sert pour couleur de référence, via currentColor, pour le curseur */
+    background: #fff;             /* sert pour couleur de fond de la zone de déplacement */
+    box-sizing: border-box;       /* même modèle de boîte pour tous */
+    cursor: pointer;
+    width: 123px;
+    height: 20px;
+    border-radius: 16px;
+    border: 2px solid $color-day-2;
+  }
+  /* la zone de déplacement */
+  input[type="range" i].custom-slider::-webkit-slider-runnable-track {
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;  /* supprimé définie sur l'input */
+  }
+  input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
+    width: 40px;
+    height: 40px;     /* largeur du bord */
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid $color-day-2;/* le centre */
+    margin-bottom: 10px;
+    /* le bord */
+  }
+  /* le curseur */
+  input[type="range" i].custom-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;       /* également nécessaire sur le curseur */
+    width: 1em;
+    height: inherit;                /* s'adapte à la hauteur de l'input */
+    border: none;
+    border-radius: 0;               /* pris en compte sur Webkit et Edge */
+    background: currentColor;
+    position: absolute;
+    /* pris en compte sur Webkit only */
   }
 
-  input[type="color" i]{
-    height: 5rem;
-    width: 5rem;
+  .base-color{
+    width: 100%;
+    height: 100%;
+    background: var(--base);
+    filter: blur(var(--blur));
+    z-index: -1;
   }
+  .base-color-under{
+    width: 100%;
+    height: 100%;
+    background-color: #ff405f;
+    position: absolute;
+    padding: var(--spacing);
+    z-index: -2;
+  }
+
 }
 
-:root{
-  --base: yellow;
-  --spacing: 4rem;
-  --blur: 2rem;
-}
-.img{
-  //position: absolute;
-  width: 10rem;
-  height: 10rem;
-  //z-index: -1;
-  padding: var(--spacing);
-  background-color: var(--base);
-  filter: blur(var(--blur));
-}

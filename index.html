@@ -12,11 +12,11 @@
     </head>
     <body>
         <div class="day day__1">
-            <header class="day__header">
-                <h1><a class="day__title day__link" href="https://courses.wesbos.com/account/access/59e63178789cae180d436a72/view/194837696">Jour 1</a></h1>
+            <div class="day__header">
+                <p><a class="day__title day__link" href="https://courses.wesbos.com/account/access/59e63178789cae180d436a72/view/194837696">Jour 1</a></p>
                 <p class="day__info">Concepts du jour: key events, playing audio, listening for transitionend event, animation, keyframes</p>
-            </header>
-            <main class="day__content">
+            </div>
+            <div class="day__content">
                 <h2 class="day__call-to-action">Tapez les touches de votre clavier</h2>
                 <div class="keypressed-wrap">
                     <div id="keypressed"></div>
@@ -68,18 +68,18 @@
                 <audio data-key="74" src="src/sounds/snare.wav"></audio>
                 <audio data-key="75" src="src/sounds/tom.wav"></audio>
                 <audio data-key="76" src="src/sounds/tink.wav"></audio>
-            </main>
-            <footer>
+            </div>
+            <div>
                 <p class="day__footer">&copy; Photo par <a class="day__link" href="https://unsplash.com/@avirichards?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge">Avi
                     Richards</a> sur <a class="day__link" href="https://unsplash.com/">Unsplash</a></p>
-            </footer>
+            </div>
         </div>
         <div class="day day__2">
-            <header class="day__header">
+            <div class="day__header">
                 <h1><a class="day__title day__link" href="https://courses.wesbos.com/account/access/59e63178789cae180d436a72/view/194837696">Jour 2</a></h1>
                 <p class="day__info">Concepts du jour: javascript setInterval, Date(), animation, css, transition-timing-function</p>
-            </header>
-            <main class="day__content">
+            </div>
+            <div class="day__content">
                 <h2 id="horloge" class="day__call-to-action"></h2>
                 <div class="horloge-wrap">
                     <div class="horloge">
@@ -98,45 +98,44 @@
                         </div>
                     </div>
                 </div>
-            </main>
-            <footer>
+            </div>
+            <div>
                 <p class="day__footer">&copy; Photo par <a class="day__link" href="https://unsplash.com/@freshhconnection?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Freshh Connection</a> sur <a class="day__link" href="https://unsplash.com/">Unsplash</a></p>
-            </footer>
+            </div>
         </div>
         <div class="day day__3">
-<!--            <img width="100px" height="auto" src="src/day-3/nathan-dumlao-unsplash-optimized.jpg" alt="image de fond décorative">-->
-            <div class="img"></div>
-            <header class="day__header">
-                <h1><a class="day__title day__link" href="https://courses.wesbos.com/account/access/59e63178789cae180d436a72/view/194130480">Jour 3</a></h1>
-                <p class="day__info">Concepts du jour: key events, playing audio, listening for transitionend event, animation, keyframes</p>
-            </header>
-            <main class="day__content">
-                <h2 class="day__call-to-action">
-                    <div class="controls">
 
+            <div class="base-color-under">
+                <div class="base-color"></div>
+            </div>
+            <div class="day__header">
+                <p><a class="day__title day__link" href="https://courses.wesbos.com/account/access/59e63178789cae180d436a72/view/194130480">Jour 3</a></p>
+                <p class="day__info">Concepts du jour: key events, playing audio, listening for transitionend event, animation, keyframes</p>
+            </div>
+            <div class="day__content">
+                <div class="day__call-to-action">
+                    <div class="controls">
                         <div class="wrap-input">
                             <label for="spacing">Espace:</label>
-                            <input type="range" name="spacing" min="0" max="25" value="10" data-sizing="px">
+                            <input class="custom-slider  custom-slider-bullet" type="range" name="spacing" min="0" max="32" value="0" data-sizing="px">
                         </div>
                         <div class="wrap-input">
                             <label for="blur">Flou:</label>
-                            <input type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+                            <input class="custom-slider custom-slider-bullet" type="range" name="blur" min="0" max="32" value="0" data-sizing="px">
                         </div>
                         <div class="wrap-input">
                             <label for="base">Couleur:</label>
-                            <input type="color" name="base" data-sizing="px">
+                            <input type="color" name="base" value="#ebf0e7">
                         </div>
-
                     </div>
+                </div>
 
-                </h2>
+            </div>
 
-            </main>
-            <footer>
+            <div>
                 <p class="day__footer">&copy; Photo par <a class="day__link" href="">Avi
                     Richards</a> sur <a class="day__link" href="https://unsplash.com/">Unsplash</a></p>
-            </footer>
-
+            </div>
         </div>
 
         <script src="dist/all.js"></script>

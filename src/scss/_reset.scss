@@ -131,7 +131,7 @@ strong {
 }
 
 label,
-input[type='file'] {
+input[type='file'], input[type='range'], input[type='color'] {
   cursor: pointer;
 }
 
@@ -141,6 +141,7 @@ textarea {
   border: 0;
   border-radius: 0;
   margin: 0;
+  color: transparent;
 }
 
 button,

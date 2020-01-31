@@ -3,13 +3,14 @@ html {
   background-size: cover;
   font-size: 100%;
   body{
+    padding: 2rem;
     display: flex;
     flex-wrap: wrap;
     .day {
       background-size: cover;
       margin: 0;
       font-family: $font-main;
-      font-weight: 100;
+      font-weight: 300;
       height: 100%;
       width: 50%;
       &__link{
@@ -30,10 +31,10 @@ html {
         line-height: 1.4rem;
       }
       &__call-to-action{
-        line-height: 4rem;
+        line-height: 3.5rem;
         font-family: $font-second;
-        padding: $padding-global;
-        font-size: 4rem;
+        padding: 0 $padding-global;
+        font-size: 3.5rem;
         text-align: center;
         animation: color-change $animation-time infinite;
       }
