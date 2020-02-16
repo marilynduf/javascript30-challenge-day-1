@@ -42,6 +42,7 @@ html {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-bottom: $padding-global;
       }
       &__header, &__footer{
         font-size: 1rem;
@@ -51,6 +52,7 @@ html {
       &__footer{
         text-align: right;
         width: 100%;
+        padding: 0 $padding-global $padding-global 0;;
       }
     }
   }
