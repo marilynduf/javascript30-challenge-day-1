@@ -129,7 +129,6 @@ const selectOption = (name) => {
     toggleDropdown();
     showSelectedArray(name);
 
-
 };
 
 dropdown();
