@@ -11,6 +11,12 @@
     animation: none;
     text-align: left;
   }
+  .wrap-input{
+    margin-bottom: 1rem;
+    label{
+      margin-right: 1rem;
+    }
+  }
   .day__link {
     color: $color-day-2;
     border-bottom: 1px solid $color-day-2;
@@ -27,6 +33,7 @@
     width: 4rem;
     height: 4rem;
     border: none;
+    padding: 0;
     border-radius: 100%;
     background: none;
   }
@@ -47,24 +54,25 @@
     box-sizing: border-box;       /* même modèle de boîte pour tous */
     cursor: pointer;
     width: 123px;
-    height: 20px;
+    height: 12px;
     border-radius: 16px;
     border: 2px solid $color-day-2;
   }
   /* la zone de déplacement */
   input[type="range" i].custom-slider::-webkit-slider-runnable-track {
-    height: 100%;
+    position: relative;
+    margin: -1rem;
     border: none;
     border-radius: 0;
     background-color: transparent;  /* supprimé définie sur l'input */
   }
   input[type=range].custom-slider.custom-slider-bullet::-webkit-slider-thumb {
-    width: 40px;
-    height: 40px;     /* largeur du bord */
+    width: 28px;
+    height: 28px;     /* largeur du bord */
     border-radius: 50%;
     background: #fff;
     border: 2px solid $color-day-2;/* le centre */
-    margin-bottom: 10px;
+    //margin-bottom: 100px!important;
     /* le bord */
   }
   /* le curseur */
@@ -75,7 +83,6 @@
     border: none;
     border-radius: 0;               /* pris en compte sur Webkit et Edge */
     background: currentColor;
-    position: absolute;
     /* pris en compte sur Webkit only */
   }
 
@@ -89,7 +96,7 @@
   .base-color-under{
     width: 100%;
     height: 100%;
-    background-color: #ff405f;
+    background-color: $color-background;
     position: absolute;
     padding: var(--spacing);
     z-index: -2;
