@@ -1,22 +1,40 @@
 //global color
 $color-text-active: #ffa767;
-$color-main-dark: #213544;
-$color-background: #fff;
+$color-main-dark: #1a1334;
+$color-background: #51ffd7;
 
 //day color
 $color-day-1: #5afff9;
 $color-day-2: $color-main-dark;
 $color-day-3: #ff5a60;
 $color-day-4: $color-main-dark;
-
+$color-day-5: #ff405f;
+$color-day-6: #ff405f;
 $color-text-hover: #ff5a60;
 
 // font
-$font-main: 'Roboto', sans-serif;
-$font-second: 'Gelasio', sans-serif;
+$font-home: 'karla', 'Roboto', 'Helvetica', sans-serif;
+$font-main: 'Roboto', 'Helvetica', sans-serif;
+$font-second: 'Gelasio', 'Roboto', 'Helvetica', sans-serif;
 
 // animation
 $animation-time: 10s;
 
 //padding & margin
-$padding-global: 2rem
+$padding-global: 2rem;
+
+%input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid $color-day-4;
+  height: 36px;
+  width: 100%;
+  padding: 2rem;
+  font-family: 'Gelasio', 'Roboto', sans-serif;
+  font-size: 2rem;
+  color: $color-main-dark;
+  &:focus{
+    outline: none;
+  }
+}

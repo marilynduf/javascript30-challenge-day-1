@@ -1,8 +1,9 @@
 .day__1 {
-  background-image: url(../src/day-1/avi-richards-unsplash-optimized.jpg);
   color: $color-day-1;
+  .day__header{
+    display: flex;
+  }
   .day__link{
-    color: $color-day-1; //main color
     border-bottom: 1px solid $color-day-1;
     &:hover{
       color: complement($color-day-1); //main color-hover
@@ -10,7 +11,7 @@
     }
   }
   .day__info{
-    color: $color-day-1;
+    width: 100%;
   }
   @keyframes color-change {
     0% { color: $color-day-1; border-color: $color-day-1; }
@@ -51,7 +52,6 @@
   flex-wrap: wrap;
   min-width: 10rem;
   max-width: 60rem;
-  padding: 0 1.5rem;
   .key {
     border-radius: 2px;
     margin: 0.5rem;

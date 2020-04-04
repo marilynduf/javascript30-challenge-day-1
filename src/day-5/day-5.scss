@@ -1,7 +1,6 @@
 .day__5 {
+  //background-image: url(../src/day-5/marble.png);
   .panels {
-    border-top: solid 1px #ff405f;
-    border-bottom: solid 1px #ff405f;
     height: 24rem;
     width: 100%;
     display: flex;
@@ -15,9 +14,12 @@
       display: flex;
       flex-direction: column;
       flex-grow: 1;
-      border-right: solid 1px black;
+      border-right: solid 1px $color-main-dark;
       transition: .2s;
       transition-timing-function: cubic-bezier(.51,.92,.24,1.15);
+      &:last-child{
+        border-right: none;
+      }
       & > *:first-child{
         background-color: #fffa6a;
         transform: translateY(-100%);

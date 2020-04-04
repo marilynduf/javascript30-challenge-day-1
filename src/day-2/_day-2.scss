@@ -1,5 +1,5 @@
 .day__2 {
-  background-image: url(../src/day-2/freshh-connection-DWt0SixqK-A-unsplash.jpg);
+  //background-image: url(../src/day-2/freshh-connection-DWt0SixqK-A-unsplash.jpg);
   color: $color-day-2;
   .day__call-to-action{
     color: $color-day-2;
@@ -21,11 +21,11 @@
     justify-content: center;
   }
   .horloge{
-    width: 18rem;
-    height: 18rem;
+    width: 24rem;
+    height: 24rem;
     border: 4px solid $color-day-2;
     border-radius: 50%;
-    margin: 50px auto;
+    margin: 2rem auto; // permet à l'aiguille de l'heure de restée centrée
     position: absolute;
     padding: 20px;
     .cercle{
@@ -73,11 +73,11 @@
     }
   }
   .horloge2{
-    width: 18rem;
-    height: 18rem;
+    width: 24rem;
+    height: 24rem;
     border: 20px solid transparent;
     border-radius: 50%;
-    margin: 50px auto;
+    margin: 2rem auto;
     padding: 40px;
     .cercle{
       position: relative;

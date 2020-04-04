@@ -1,0 +1,57 @@
+.accueil{
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    color: $color-main-dark;
+    font-family: $font-home;
+    h1{
+      font-size: 11rem;
+      padding: 5rem 0;
+      line-height: 10rem;
+      font-weight: 800;
+      width: 50%;
+    }
+    .banniere{
+      //background: url("../src/experience.svg");
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 9rem;
+      position: absolute;
+      top: 20rem;
+      left: 41rem;
+    }
+    &__intro{
+      display: flex;
+      .competences{
+        font-size: 1.8rem;
+        display: flex;
+        padding-right: 2rem;
+        width: 50%;
+      }
+      .bio{
+        font-size: 1.8rem;
+        display: flex;
+        width: 50%;
+      }
+      h2{
+        font-style: italic;
+        padding-right: 2rem;
+      }
+    }
+    nav{
+      display: flex;
+      justify-content: space-between;
+      a{
+        border-bottom: 1px solid $color-main-dark;
+      }
+      .coordonnees > span{
+        padding-right: 2rem;
+        &:last-child{
+          padding-right: 0;
+        }
+      }
+    }
+
+
+
+}

@@ -1,0 +1,22 @@
+.day__6{
+  .input {
+    @extend %input;
+    padding: 2rem 1rem;
+  }
+  .highlight {
+    background-color: #5afff9;
+  }
+  .result {
+    height: 20rem;
+    width: 100%;
+    overflow: scroll;
+    font-size: 1.8rem;
+    li{
+      padding: .5rem 0;
+      .population{
+        font-size: 1.4rem;
+        color: $color-day-6;
+      }
+    }
+  }
+}

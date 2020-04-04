@@ -1,3 +1,5 @@
+// Masonry style grid
+
 function resizeGridItem(item){
     grid = document.getElementsByClassName("grid")[0];
     rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
@@ -18,7 +20,6 @@ function resizeInstance(instance){
     resizeGridItem(item);
 }
 
-window.onload = resizeAllGridItems(); //rafraîchie la grille on load
-window.addEventListener("resize", resizeAllGridItems); //rafraîchie la grille quand window est resize
-
-
+window.onload = resizeAllGridItems();//rafraîchie la grille on load
+window.reload = resizeAllGridItems();//rafraîchie la grille on reload
+window.addEventListener("resize", resizeAllGridItems); //rafraîchie la grille quand window est resizé

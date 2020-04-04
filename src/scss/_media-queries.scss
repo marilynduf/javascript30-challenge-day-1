@@ -1,18 +1,16 @@
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 780px) {
-  html body .day {
-    &__header{
-     padding: 1rem;
-    }
+  html body{
+    padding: 0;
+  .day {
     &__title{
       font-size: 2rem;
     }
     &__footer{
-      font-size: 0.8rem;
-      padding: 1rem;
+      font-size: 1rem;
     }
     &__info{
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       line-height: 1.8rem;
       padding-top: 1.2rem;
     }
@@ -33,11 +31,12 @@
           font-size: 0.5rem;
         }
       }
-      .keypressed-wrap{
-        padding-bottom: 1rem;
-        min-width: 4rem;
-        height: 4rem;
-        font-size: 1.5rem;
+        .keypressed-wrap{
+          padding-bottom: 1rem;
+          min-width: 4rem;
+          height: 4rem;
+          font-size: 1.5rem;
+        }
       }
     }
   }

@@ -3,64 +3,65 @@ html {
   background-size: cover;
   font-size: 62.5%;
   body{
-    background-color: $color-background;
-    padding: 2rem;
-    .day-wrap{
-      display: flex;
-    }
-    .day {
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-      background-size: cover;
-      margin: 0;
-      font-family: $font-main;
-      font-weight: 300;
-      &__link{
-        border-bottom: 1px solid black; //main color
-        text-decoration: none;
-        margin-bottom: $padding-global;
-        &:active{
-          color: $color-text-active;
-          border-bottom: 1px solid $color-text-active;
+      background-color: $color-background;
+      padding: 2rem;
+        .day-wrap{
+          display: flex;
         }
-      }
-      &__fullwith{
-        width: 100%;
-      }
-      &__title{
-        font-size: 2rem;
-      }
-      &__info{
-        padding-top: $padding-global;
-        width: 50%;
-        line-height: 1.5rem;
-        font-size: 1.2rem;
-        font-weight: 300;
-      }
-      &__call-to-action{
-        line-height: 3.5rem;
-        font-family: $font-second;
-        padding: 0 $padding-global;
-        font-size: 3.5rem;
-        text-align: center;
-        animation: color-change $animation-time infinite;
-      }
-      &__content{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: $padding-global;
-      }
-      &__header, &__footer{
-        font-size: 1rem;
-        letter-spacing: 1px;
-        padding: $padding-global;
-      }
+        .day {
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+          background-size: cover;
+          margin: 0;
+          font-family: $font-main;
+          font-weight: 300;
+          &__link{
+            border-bottom: 1px solid black; //main color
+            text-decoration: none;
+            margin-bottom: $padding-global;
+            &:active{
+              color: $color-text-active;
+              border-bottom: 1px solid $color-text-active;
+            }
+          }
+          &__fullwith{
+            width: 100%;
+          }
+          &__title{
+            font-size: 2rem;
+          }
+          &__info{
+            padding-top: $padding-global;
+            width: 50%;
+            line-height: 1.9rem;
+            font-size: 1.4rem;
+            font-weight: 300;
+          }
+          &__call-to-action{
+            line-height: 3.5rem;
+            font-family: $font-second;
+            font-size: 3.5rem;
+            text-align: center;
+            animation: color-change $animation-time infinite;
+            padding-bottom: $padding-global;
+          }
+          &__content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 $padding-global;
+          }
+          &__header, &__footer{
+            font-size: 1rem;
+            letter-spacing: 1px;
+            padding: $padding-global;
+            color: $color-main-dark;
+          }
       &__footer{
         text-align: right;
         width: 100%;
-        padding: 0 $padding-global $padding-global 0;;
+        padding: $padding-global ;
       }
     }
   }
