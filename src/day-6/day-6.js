@@ -11,7 +11,7 @@ fetch(fetchedData)
 );
 
 //TODO: fonction qui trouve les match .filter()
-//TODO: insensible majuscule et minuscule
+//TODO: ajouter une fonction qui majuscule ene prend pas en compte les majuscules et les minuscules
 function findMatches(lettersToMatch, tabData) {
     return tabData.filter(place => {
         const regex = new RegExp(lettersToMatch, 'gi'); //g = global, i = insensitive (insensible au min et maj)

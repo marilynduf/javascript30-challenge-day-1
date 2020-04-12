@@ -4,17 +4,17 @@ window.addEventListener('keydown', function(e) {
     let audio = document.querySelector(`audio[data-key='${e.keyCode}']`);
     let keysound = document.querySelector(`.key[data-key='${e.keyCode}']`);
 
-    function displayKeypressed() {
-        let keypressed = document.getElementById('keypressed');
-        keypressed.classList.add('keypressed-animation');
-        if (e.code === 'Space') return keypressed.innerHTML = `${e.code}`;
-        keypressed.innerHTML = `${e.key}`;
-        function removeKeyTransition(e){
-            this.classList.remove('keypressed-animation');
-        }
-        keypressed.addEventListener('transitionend', removeKeyTransition);
-    }
-    displayKeypressed();
+    // function displayKeypressed() {
+    //     let keypressed = document.getElementById('keypressed');
+    //     keypressed.classList.add('keypressed-animation');
+    //     if (e.code === 'Space') return keypressed.innerHTML = `${e.code}`;
+    //     keypressed.innerHTML = `${e.key}`;
+    //     function removeKeyTransition(e){
+    //         this.classList.remove('keypressed-animation');
+    //     }
+    //     keypressed.addEventListener('transitionend', removeKeyTransition);
+    // }
+    // displayKeypressed();
 
     if(!audio) return;
 

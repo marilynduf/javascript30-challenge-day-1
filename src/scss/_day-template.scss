@@ -1,10 +1,11 @@
 html {
-  font-family: $font-main;
   background-size: cover;
   font-size: 62.5%;
   body{
-      background-color: $color-background;
-      padding: 2rem;
+      font-family: $font-main;
+      background-color: $color-bg;
+      color: $color-main-dark;
+      padding: $padding-global;
         .day-wrap{
           display: flex;
         }
@@ -17,9 +18,14 @@ html {
           font-family: $font-main;
           font-weight: 300;
           &__link{
-            border-bottom: 1px solid black; //main color
+            color: $color-main-dark;
             text-decoration: none;
             margin-bottom: $padding-global;
+            border-bottom: 1px solid $color-main-dark;
+            &:hover{
+              color: yellow; //main color-hover
+              border-bottom: 1px solid yellow; //main color
+            }
             &:active{
               color: $color-text-active;
               border-bottom: 1px solid $color-text-active;
@@ -30,20 +36,28 @@ html {
           }
           &__title{
             font-size: 2rem;
+            font-weight: 400;
+            padding: 0.2rem 0.5rem;
+            background-color: $color-main-dark;
+            color: $color-bg;
+            transform: rotate(-6deg);
+            display: inline-block;
+            font-family: $font-third;
+          }
+          .fioriture{
+
           }
           &__info{
             padding-top: $padding-global;
-            width: 50%;
             line-height: 1.9rem;
             font-size: 1.4rem;
-            font-weight: 300;
+            font-weight: 400;
           }
           &__call-to-action{
             line-height: 3.5rem;
-            font-family: $font-second;
             font-size: 3.5rem;
+            font-family: $font-second;
             text-align: center;
-            animation: color-change $animation-time infinite;
             padding-bottom: $padding-global;
           }
           &__content{
@@ -56,12 +70,11 @@ html {
             font-size: 1rem;
             letter-spacing: 1px;
             padding: $padding-global;
-            color: $color-main-dark;
           }
       &__footer{
         text-align: right;
         width: 100%;
-        padding: $padding-global ;
+        padding: $padding-global;
       }
     }
   }

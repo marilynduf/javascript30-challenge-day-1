@@ -1,8 +1,3 @@
-:root{
-  --base: #ebf0e7;
-  --spacing: 0px;
-  --blur: 0px;
-}
 .day__3 {
   color: $color-day-2;
   position: relative;
@@ -15,18 +10,6 @@
     margin-bottom: 1rem;
     label{
       margin-right: 1rem;
-    }
-  }
-  .day__link {
-    color: $color-day-2;
-    border-bottom: 1px solid $color-day-2;
-
-    &:hover {
-      color: $color-day-3;
-      border-bottom: 1px solid complement($color-day-3);
-    }
-    label{
-      color: $color-day-3;
     }
   }
   input[type=color]{
@@ -50,7 +33,7 @@
     font: inherit;                /* même rendu suivant font document */
     outline: none;
     color: $color-day-2;                  /* sert pour couleur de référence, via currentColor, pour le curseur */
-    background: #fff;             /* sert pour couleur de fond de la zone de déplacement */
+    background: $color-action;             /* sert pour couleur de fond de la zone de déplacement */
     box-sizing: border-box;       /* même modèle de boîte pour tous */
     cursor: pointer;
     width: 123px;
@@ -70,7 +53,7 @@
     width: 28px;
     height: 28px;     /* largeur du bord */
     border-radius: 50%;
-    background: #fff;
+    background: $color-action;
     border: 2px solid $color-day-2;/* le centre */
     //margin-bottom: 100px!important;
     /* le bord */
@@ -85,22 +68,4 @@
     background: currentColor;
     /* pris en compte sur Webkit only */
   }
-
-  .base-color{
-    width: 100%;
-    height: 100%;
-    background: var(--base);
-    filter: blur(var(--blur));
-    z-index: -1;
-  }
-  .base-color-under{
-    width: 100%;
-    height: 100%;
-    background-color: $color-background;
-    position: absolute;
-    padding: var(--spacing);
-    z-index: -2;
-  }
-
 }
-

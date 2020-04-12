@@ -1,27 +1,21 @@
-:root {
-  --colorPrimaryLight: #494f61;
-  --colorPlaceholder: #9b9fa8;
-  --colorBackground: #fffa6a;
-  --colorBorder: #000000;
-  --colorAccent: #003bde;
-  --gutter: 0 16px;
-}
 .day__4{
   .selected_array{
     border-collapse: collapse;
     font-size: 1.6rem;
-    font-family: Akkurat-Mono, Roboto, sans-serif;
+    font-family: $font-third;
     min-height: 16rem;
+    width: 100%;
     tr{
-      border: solid 1px $color-main-dark;
+      border: solid 2px $color-main-dark;
+      width: 100%;
       &:first-child{
-        border-bottom: double;
+        border-bottom: 5px double $color-main-dark;
       }
       td{
-        background: #fff;
         padding: 1rem 1rem 0.5rem 1rem;
-        border: 1px solid #000;
+        border: solid 2px $color-main-dark;
         vertical-align: middle;
+        width: 100%;
       }
     }
   }
@@ -32,11 +26,6 @@
   margin-top: 2rem;
 }
 
-//.input__active {
-//  border-bottom-left-radius: 0px !important;
-//  border-bottom-right-radius: 0px !important;
-//}
-
 .input__placeholder {
   display: flex;
   flex-direction: row;
@@ -44,7 +33,6 @@
   align-items: center;
 }
   .placeholder, .input__selected {
-  color: $color-day-4;
   font-size: 3rem;
   font-family: Gelasio, Roboto, sans-serif;
 }

@@ -1,18 +1,18 @@
-const inventors = [
-    {first: 'Geneviève', last:'B.', year: 1968, passed:1989},
-    {first: 'Hélène', last:'C.', year: 1966, passed:1989},
-    {first: 'Nathalie', last:'C.', year: 1966, passed:1989},
-    {first: 'Barbara', last:'D.', year: 1967, passed:1989},
-    {first: 'Anne-Marie', last:'E.', year: 1968, passed:1989},
-    {first: 'Maud', last:'H.', year: 1960, passed:1989},
-    {first: 'Maryse', last:'L.', year: 1964, passed:1989},
-    {first: 'Barbara', last:'K.-W.', year: 1958, passed:1989},
-    {first: 'Maryse', last:'L.', year: 1966, passed:1989},
-    {first: 'Anne-Marie', last:'L.', year: 1966, passed:1989},
-    {first: 'Sonia', last:'P.', year: 1966, passed:1989},
-    {first: 'Michèle', last:'R.', year: 1968, passed:1989},
-    {first: 'Annie', last:'St-A.', year: 1966, passed:1989},
-    {first: 'Annie', last:'T.', year: 1968, passed:1989}
+const women = [
+    {first: 'Geneviève', last:'B.', year: 1968, passed:1989, program:'Génie mécanique'},
+    {first: 'Hélène', last:'C.', year: 1966, passed:1989, program:'Génie mécanique'},
+    {first: 'Nathalie', last:'C.', year: 1966, passed:1989, program:'Génie mécanique'},
+    {first: 'Barbara', last:'D.', year: 1967, passed:1989, program:'Génie mécanique'},
+    {first: 'Anne-Marie', last:'E.', year: 1968, passed:1989, program:'Génie chimique'},
+    {first: 'Maud', last:'H.', year: 1960, passed:1989, program:'Génie métallurgique'},
+    {first: 'Maryse', last:'L.', year: 1964, passed:1989, program:'Employée à Polytechnique, service des finances'},
+    {first: 'Barbara', last:'K.-W.', year: 1958, passed:1989, program:'Sciences infirmières'},
+    {first: 'Maryse', last:'L.', year: 1966, passed:1989, program:'Génie métallurgique'},
+    {first: 'Anne-Marie', last:'L.', year: 1966, passed:1989, program:'Génie mécanique'},
+    {first: 'Sonia', last:'P.', year: 1966, passed:1989, program:'Génie mécanique'},
+    {first: 'Michèle', last:'R.', year: 1968, passed:1989, program:'Génie métallurgique'},
+    {first: 'Annie', last:'St-A.', year: 1966, passed:1989, program:'Génie mécanique'},
+    {first: 'Annie', last:'T.', year: 1968, passed:1989, program:'Génie métallurgique'}
 ];
 //TODO Afficher le tableau tel quel, par défault
 //TODO Créer la forme (ligne, cellules...) dans laquelle le tableau sera affichées
@@ -33,7 +33,7 @@ row_title.appendChild(year_born);
 row_title.appendChild(year_passed);
 selected_array.appendChild(row_title);
 
-inventors.forEach(elem => {
+women.forEach(elem => {
     //let selected_array = document.querySelector('.selected_array');
 
     let row = document.createElement('tr');
@@ -52,7 +52,6 @@ inventors.forEach(elem => {
 
     selected_array.appendChild(row);
 });
-console.table(inventors);
 
 const cardio_arrays = ['filter()', 'sort()', 'map()', 'reduce()']; // liste des méthodes pratiquées
 
@@ -64,7 +63,7 @@ const showSelectedArray = (name) => {
 
     /* filter() */
     if (name === 'filter()') {
-        const fifteen = inventors.filter(inventor => inventor.year >= 1400 && inventor.year < 1600);
+        const fifteen = women.filter(woman => woman.year >= 1968 && woman.year < 1970);
         fifteen.forEach(element => {
             let display_test = document.querySelector(".selected_array");
             const every_element = document.createElement("div");
@@ -73,36 +72,38 @@ const showSelectedArray = (name) => {
         });
     }
     if (name === 'sort()') {
-        const orderBylastName = inventors.sort((a, b) => a.last > b.last ? 1 : -1);
-        orderBylastName.forEach(element => {
+        const orderFirstName = women.sort((a, b) => a.first > b.first ? 1 : -1);
+        orderFirstName.forEach(element => {
             let display_test = document.querySelector(".selected_array");
             const every_element = document.createElement("div");
             every_element.textContent = element.first + ' ' + element.last;
             display_test.appendChild(every_element);
 
         });
-        console.table(orderBylastName);
 
     }
+    // map()
     if (name === 'map()') {
-        const fullNames = inventors.sort((a, b) => a.last > b.last ? 1 : -1);
+        const fullNames = women.sort((a, b) => a.first > b.first ? 1 : -1);
         fullNames.forEach(element => {
             let display_test = document.querySelector(".selected_array");
             const every_element = document.createElement("div");
             every_element.textContent = element.value;
             display_test.appendChild(every_element);
         });
+
     }
     if (name === 'reduce()') {
-        const totalYears = inventors.reduce((total, inventor) =>
-        {
-            return total + (inventor.passed - inventor.year);
-        }, 0); // 0 est la valeur de déclaration de la variable total
+        // 0 est la valeur de déclaration de la variable total
+        // const totalWomenDied = women.reduce((total, woman) =>
+        // {
+        //     return total + (women.passed - women.year);
+        // }, 0); // 0 est la valeur de déclaration de la variable total
+        //
         const display_test = document.querySelector(".selected_array");
         const every_element = document.createElement("div");
-        every_element.textContent = `${totalYears}`;
+        every_element.textContent = `${women.length}`;
         display_test.appendChild(every_element);
-
     }
 
 };
