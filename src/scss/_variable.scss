@@ -1,0 +1,53 @@
+:root{
+  --base: 5;
+  --spacing: 0px;
+  --blur: 0px;
+}
+//global color
+$color-text-active: #ffa767;
+$color-main-dark: #1a1334;
+
+$color-bg: hsl(var(--base), 100%, 66%);
+$color-bg-hsl-saturation: 100%;
+$color-bg-hsl-light: 66%;
+$color-bg-hsl-light-2: 78%;
+
+$color-action: #edffff;
+$color-mid-background: #4df3cd;
+
+//day color
+$color-day-1: $color-main-dark;
+$color-day-2: $color-main-dark;
+$color-day-3: #ff5a60;
+$color-day-4: $color-main-dark;
+$color-day-5: #ff405f;
+$color-day-6: #ff405f;
+$color-text-hover: #ff5a60;
+
+// fonts
+$font-home: 'karla', 'Roboto', 'Helvetica', sans-serif;
+$font-main: 'Roboto', 'Helvetica', sans-serif;
+$font-second: 'Gelasio', 'Roboto', 'Helvetica', sans-serif;
+$font-third: 'Roboto Mono', monospace, sans-serif;
+
+// animation
+$animation-time: 10s;
+
+//padding & margin
+$padding-global: 2rem;
+
+//mixins
+%input {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border: 2px solid $color-day-4;
+  width: 100%;
+  border-radius: 2px;
+  font-family: 'Gelasio', 'Roboto', sans-serif;
+  font-size: 2rem;
+  color: $color-main-dark;
+  &:focus{
+    outline: none;
+  }
+}

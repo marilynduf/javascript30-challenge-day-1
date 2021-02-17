@@ -1,0 +1,72 @@
+.day__1 {
+  color: $color-day-1;
+  .day__info{
+    width: 100%;
+  }
+}
+
+.keypressed-wrap{
+  display: flex;
+  padding-bottom: 2rem;
+  justify-content: center;
+}
+#keypressed{
+  min-width: 5rem;
+  height: 5rem;
+  padding: 1rem;
+  border: 1px solid $color-day-1;
+  border-radius: 6px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-family: $font-main;
+  animation: color-change $animation-time infinite;
+  opacity: 0;
+  transition: all 0.4s;
+  transition-timing-function: ease-out;
+}
+.keypressed-animation{
+  opacity: 1!important;
+}
+.keys {
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-width: 10rem;
+  max-width: 60rem;
+  .key {
+    border-radius: 2px;
+    margin: 1rem;
+    padding: 1rem;
+    transition: all 0.1s;
+    text-align: center;
+    color: $color-main-dark;
+    background-color: $color-action;
+    min-width: 80px;
+    font-size: 5rem;
+    kbd {
+      display: block;
+      font-family: 'Kumar One', cursive;
+      max-height: 33px;
+    }
+    .sound {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: $color-main-dark;
+      font-family: $font-main;
+    }
+  }
+}
+
+// animation class
+.key-animation{
+  transform: scale(1.1);
+  background-color: $color-day-1;
+  border-color: $color-day-1!important;
+}
+
+
+

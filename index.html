@@ -1,81 +1,242 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>JS Drum Kit</title>
-    <link rel="stylesheet" href="dist/reset.css">
-    <link rel="stylesheet" href="dist/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Kumar+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Gelasio|Roboto:100&display=swap" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>JS Drum Kit</title>
+        <link rel="stylesheet" href="dist/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Kumar+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Gelasio&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500&display=swap" rel="stylesheet">
+    </head>
+    <body id="body">
 
-<body>
+    <div class="grid">
 
-<header>
-    <h1><a class="link" href="https://javascript30.com/">Défi 30 jours Vanilla Javascript</a> / <a class="link" href="https://courses.wesbos.com/account/access/59e63178789cae180d436a72/view/194837696">Jour 1</a></h1>
-    <p class="concept">Concepts du jour: key events, playing audio, listening for transitionend event, animation, keyframes</p>
-</header>
+        <div class="day day__1">
+            <div class="content">
+                <div class="day__header">
+                    <p class="day__title">Jour 1</p>
+                    <p class="day__info">Concepts du jour: key events, playing audio, listening for transitionend event, animation, keyframes</p>
+                </div>
+                <div class="day__content">
+                    <h2 class="day__call-to-action">Tapez les touches de votre clavier</h2>
+                    <div class="keys">
+                        <div data-key="65" class="key">
+                            <kbd>A</kbd>
+                            <span class="sound">clap</span>
+                        </div>
+                        <div data-key="83" class="key">
+                            <kbd>S</kbd>
+                            <span class="sound">hihat</span>
+                        </div>
+                        <div data-key="68" class="key">
+                            <kbd>D</kbd>
+                            <span class="sound">kick</span>
+                        </div>
+                        <div data-key="70" class="key">
+                            <kbd>F</kbd>
+                            <span class="sound">openhat</span>
+                        </div>
+                        <div data-key="71" class="key">
+                            <kbd>G</kbd>
+                            <span class="sound">boom</span>
+                        </div>
+                        <div data-key="72" class="key">
+                            <kbd>H</kbd>
+                            <span class="sound">ride</span>
+                        </div>
+                        <div data-key="74" class="key">
+                            <kbd>J</kbd>
+                            <span class="sound">snare</span>
+                        </div>
+                        <div data-key="75" class="key">
+                            <kbd>K</kbd>
+                            <span class="sound">tom</span>
+                        </div>
+                        <div data-key="76" class="key">
+                            <kbd>L</kbd>
+                            <span class="sound">tink</span>
+                        </div>
+                    </div>
+                    <audio data-key="65" src="src/sounds/clap.wav"></audio>
+                    <audio data-key="83" src="src/sounds/hihat.wav"></audio>
+                    <audio data-key="68" src="src/sounds/kick.wav"></audio>
+                    <audio data-key="70" src="src/sounds/openhat.wav"></audio>
+                    <audio data-key="71" src="src/sounds/boom.wav"></audio>
+                    <audio data-key="72" src="src/sounds/ride.wav"></audio>
+                    <audio data-key="74" src="src/sounds/snare.wav"></audio>
+                    <audio data-key="75" src="src/sounds/tom.wav"></audio>
+                    <audio data-key="76" src="src/sounds/tink.wav"></audio>
+                </div>
+                <div>
+                    <p class="day__footer">&copy; Photo par <a class="day__link" href="https://unsplash.com/@avirichards?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge">Avi
+                        Richards</a> sur <a class="day__link" href="https://unsplash.com/">Unsplash</a></p>
+                </div>
+            </div>
+        </div>
 
+        <div class="day day__2">
+            <div class="content">
+                <div class="day__header">
+                    <h1 class="day__title">Jour 2</h1>
+                    <p class="day__info">Concepts du jour: javascript setInterval, Date(), animation, transition-timing-function</p>
+                </div>
+                <div class="day__content">
+                    <h2 id="horloge" class="day__call-to-action"></h2>
+                    <div class="horloge-wrap">
+                        <div class="horloge">
+                            <div class="petit-cercle-au-milieu">
+                                <div class="point"></div>
+                            </div>
+                            <div class="cercle">
+                                <div class="aiguille min">
+                                </div>
+                                <div class="aiguille sec"></div>
+                            </div>
+                        </div>
+                        <div class="horloge2">
+                            <div class="cercle">
+                                <div class="aiguille heure"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<main class="container">
-    <p class="instructions">Tapez les touches de votre clavier</p>
-    <div class="keypressed-wrap">
-        <div id="keypressed"></div>
+        <div class="day day__3">
+            <div class="content">
+                <div class="base-color">
+                    <div class="day__header">
+                        <div>
+                            <p class="day__title">Jour 3</p>
+                            <div class="fioriture"></div>
+                        </div>
+                        <p class="day__info">Concepts du jour: CSS variables, listening for change end mousemove events</p>
+                    </div>
+                    <div class="day__content">
+                        <div class="day__call-to-action">
+                            <div class="controls">
+                                <div class="wrap-input">
+                                    <label for="base">Couleur:</label>
+                                    <input class="custom-slider custom-slider-bullet" type="range" name="base" min="5" max="162" value="5">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="day day__5">
+            <div class="content">
+                <div class="day__header">
+                    <p class="day__title">Jour 5</p>
+                    <p class="day__info">Concepts du jour: Flexbox, responsive design </p>
+                </div>
+
+                <div class="panels">
+                    <div class="panel">
+                        <div class='text'>1</div>
+                        <div class='text text-middle'>1</div>
+                        <div class='text'>1</div>
+                    </div>
+                    <div class="panel">
+                        <div class='text text-top'>2</div>
+                        <div class='text text-middle'>2</div>
+                        <div class='text text-bottom'>2</div>
+                    </div>
+                    <div class="panel">
+                        <div class='text text-top'>3</div>
+                        <div class='text text-middle'>3</div>
+                        <div class='text text-bottom'>3</div>
+                    </div>
+                    <div class="panel">
+                        <div class='text text-top'>4</div>
+                        <div class='text text-middle'>4</div>
+                        <div class='text text-bottom'>4</div>
+                    </div>
+                    <div class="panel">
+                        <div class='text text-top'>5</div>
+                        <div class='text text-middle'>5</div>
+                        <div class='text text-bottom'>5</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="day day__4">
+            <div class="content">
+                <div class="base-color-under">
+                    <div class="base-color"></div>
+                </div>
+                <div class="day__header">
+                    <p class="day__title">Jour 4</p>
+                    <p class="day__info">Concepts du jour: Array methods. filter(), sort(), map() and reduce() </p>
+                </div>
+                <div class="day__content">
+                    <div class="selected_array"></div>
+                    <div id="array_cardio"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="day day__6">
+            <div class="content">
+                <div class="day__header">
+                    <p class="day__title">Jour 6</p>
+                    <p class="day__info">Concepts du jour: Recherche AJAX </p>
+                </div>
+                <div class="day__content">
+                    <textarea type="text" class="input input-search day__call-to-action" placeholder="Entrez le nom d'une ville des États-Unis ici"></textarea>
+                    <div class="result"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="day day__7">
+            <div class="content">
+                <div class="day__header">
+                    <p class="day__title">Jour 7</p>
+                    <p class="day__info">Concepts du jour: Cardio array 2 </p>
+                </div>
+                <div class="day__content">
+                </div>
+            </div>
+        </div>
+
+        <div class="day day__8">
+            <div class="content">
+                <div class="day__header">
+                    <p class="day__title">Jour 8</p>
+                    <p class="day__info">Concepts du jour: Canvas </p>
+                </div>
+                <div class="day__content">
+                    <canvas id="draw" width="300px" height="300px"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="day day__9">
+            <div class="content">
+                <div class="day__header">
+                    <p class="day__title">Jour 9</p>
+                    <p class="day__info">Concepts du jour: Playlist Spotify </p>
+                </div>
+                <div class="day__content">
+                    <iframe src="https://open.spotify.com/embed/playlist/1W3936keN6ZfgwOhNvObwL" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <div class="keys">
-        <div data-key="65" class="key">
-            <kbd>A</kbd>
-            <span class="sound">clap</span>
-        </div>
-        <div data-key="83" class="key">
-            <kbd>S</kbd>
-            <span class="sound">hihat</span>
-        </div>
-        <div data-key="68" class="key">
-            <kbd>D</kbd>
-            <span class="sound">kick</span>
-        </div>
-        <div data-key="70" class="key">
-            <kbd>F</kbd>
-            <span class="sound">openhat</span>
-        </div>
-        <div data-key="71" class="key">
-            <kbd>G</kbd>
-            <span class="sound">boom</span>
-        </div>
-        <div data-key="72" class="key">
-            <kbd>H</kbd>
-            <span class="sound">ride</span>
-        </div>
-        <div data-key="74" class="key">
-            <kbd>J</kbd>
-            <span class="sound">snare</span>
-        </div>
-        <div data-key="75" class="key">
-            <kbd>K</kbd>
-            <span class="sound">tom</span>
-        </div>
-        <div data-key="76" class="key">
-            <kbd>L</kbd>
-            <span class="sound">tink</span>
-        </div>
-    </div>
-    <audio data-key="65" src="src/sounds/clap.wav"></audio>
-    <audio data-key="83" src="src/sounds/hihat.wav"></audio>
-    <audio data-key="68" src="src/sounds/kick.wav"></audio>
-    <audio data-key="70" src="src/sounds/openhat.wav"></audio>
-    <audio data-key="71" src="src/sounds/boom.wav"></audio>
-    <audio data-key="72" src="src/sounds/ride.wav"></audio>
-    <audio data-key="74" src="src/sounds/snare.wav"></audio>
-    <audio data-key="75" src="src/sounds/tom.wav"></audio>
-    <audio data-key="76" src="src/sounds/tink.wav"></audio>
-</main>
 
-<footer>
-    <p class="credit">&copy; Photo par <a class="link" href="https://unsplash.com/@avirichards?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge">Avi
-        Richards</a> on <a class="link" href="https://unsplash.com/">Unsplash</a></p>
-</footer>
-<script src="dist/all.js"></script>
-</body>
+    <script src="dist/all.js"></script>
+
+    </body>
 </html>
+

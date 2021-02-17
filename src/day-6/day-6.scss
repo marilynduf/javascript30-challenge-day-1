@@ -1,0 +1,32 @@
+.day__6{
+  .input {
+    @extend %input;
+    width: 100%;
+    background-color: $color-bg;
+    border: none;
+    font-size: 3.5rem;
+    line-height: 4.1rem;
+    &::placeholder {
+      color: $color-main-dark;
+      font-size: 3.5rem;
+    }
+  }
+  .highlight {
+    background-color: $color-action;
+  }
+  .result {
+    color: $color-main-dark;
+    height: 20rem;
+    width: 100%;
+    overflow: scroll;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    font-family: $font-third;
+    li{
+      padding: .5rem 0;
+      .population{
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
